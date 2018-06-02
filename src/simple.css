@@ -1,0 +1,26 @@
+.MathHeader {
+  margin-top: 16px;
+  font-size: 18px;
+  text-decoration: underline;
+  padding: 8px;
+}
+
+.Calcs {
+  opacity: 0.2;
+}
+
+input {
+  width: 180px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30px;
+  font-size: 14px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
