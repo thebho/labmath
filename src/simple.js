@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './simple.css'
 
+var decimalRegex = '[0-9]+([\.][0-9]+)?'
+var intRegex = '[0-9]+'
+
 class Simple extends Component {
   state = {
     dextroseConcentration: '',
@@ -39,7 +42,7 @@ class Simple extends Component {
 
   sterileWaterCalculation = () => {
     var sterileWaterVolume = this.state.volume - this.state.volumeOfD70 - this.state.volumeOfNACL234 - this.state.mLPotassiumChl
-    this.setState({sterileWaterVolume: sterileWaterVolume})
+    this.setState({sterileWaterVolume: sterileWaterVolume.toFixed(2)})
   }
 
   render() {
@@ -49,10 +52,10 @@ class Simple extends Component {
           <div className='MathHeader'> Variable Dextrose using D70%</div>
           <div className='equation-body'>
             <form className='equation-left'>
-              <input type='number' pattern='[0-9]*' placeholder='Dextrose Concentation' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
+              <input type='number' pattern={decimalRegex} placeholder='Dextrose Concentation' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
               <div>
                 (
-                <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
+                <input type='number' pattern={intRegex} placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
                 )
               </div>
             </form>
@@ -63,10 +66,10 @@ class Simple extends Component {
           <div className='MathHeader'> Variable NaCl using 23.4%</div>
             <div className='equation-body'>
             <form className='equation-left'>
-              <input type='number' pattern='[0-9]*' placeholder='NaCl Concentation' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
+              <input type='number' pattern={decimalRegex} placeholder='NaCl Concentation' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
               <div>
                 (
-                  <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
+                <input type='number' pattern={intRegex}   placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
                 )
               </div>
             </form>
@@ -77,10 +80,10 @@ class Simple extends Component {
           <div className='MathHeader'> Variable KCl using 2 mEq/mL</div>
           <div className='equation-body'>
             <form className='equation-left'>
-              <input type='number' placeholder='mEq Per Liter' value={this.state.mEqperLiter} onChange={this.handlemEqChange} />
+              <input type='number' pattern={decimalRegex} placeholder='mEq Per Liter' value={this.state.mEqperLiter} onChange={this.handlemEqChange} />
               <div>
                 (
-                  <input type='number' pattern='[0-9]*' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
+                <input type='number' pattern={intRegex} placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
                 )
               </div>
           </form>
