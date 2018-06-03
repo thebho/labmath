@@ -49,7 +49,7 @@ class Simple extends Component {
           <div className='MathHeader'> Variable Dextrose using D70%</div>
           <div className='equation-body'>
             <form className='equation-left'>
-              <input type='number' placeholder='Dextrose Concentation' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
+              <input type='number' pattern='[0-9]*' placeholder='Dextrose Concentation' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
               <div>
                 (
                 <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
@@ -63,7 +63,7 @@ class Simple extends Component {
           <div className='MathHeader'> Variable NaCl using 23.4%</div>
             <div className='equation-body'>
             <form className='equation-left'>
-              <input type='number' placeholder='NaCl Concentation' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
+              <input type='number' pattern='[0-9]*' placeholder='NaCl Concentation' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
               <div>
                 (
                   <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
@@ -80,7 +80,7 @@ class Simple extends Component {
               <input type='number' placeholder='mEq Per Liter' value={this.state.mEqperLiter} onChange={this.handlemEqChange} />
               <div>
                 (
-                  <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
+                  <input type='number' pattern='[0-9]*' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
                 )
               </div>
           </form>
