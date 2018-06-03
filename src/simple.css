@@ -1,8 +1,7 @@
 .MathHeader {
-  margin-top: 16px;
   font-size: 18px;
-  text-decoration: underline;
-  padding: 8px;
+  padding: 4px;
+  border-bottom: 2px solid;
 }
 
 .Calcs {
@@ -23,4 +22,39 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.equation {
+  border: 1px solid gray;
+  margin: 8px;
+  min-width: 350px
+
+}
+
+.labMathBody {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.equation-body {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+
+}
+
+.equation-left {
+  flex-grow: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.equation-right {
+  padding: 12px;
+  border: 1px solid;
 }

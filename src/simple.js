@@ -44,40 +44,56 @@ class Simple extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div className='labMathBody'>
+        <div className='equation'>
           <div className='MathHeader'> Variable Dextrose using D70%</div>
-          <form>
-            <input type='number' placeholder='Dextrose Concentation' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
-            (
-            <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
-            )
-            <span> = {this.state.volumeOfD70}</span>
-          </form>
+          <div className='equation-body'>
+            <form className='equation-left'>
+              <input type='number' placeholder='Dextrose Concentation' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
+              <div>
+                (
+                <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
+                )
+              </div>
+            </form>
+            <div className='equation-right'>{this.state.volumeOfD70}</div>
+          </div>
         </div>
-        <div>
-        <div className='MathHeader'> Variable NaCl using 23.4%</div>
-          <form>
-            <input type='number' placeholder='NaCl Concentation' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
-            (
-            <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
-            )
-            <span> = {this.state.volumeOfNACL234}</span>
-          </form>
+        <div className='equation'>
+          <div className='MathHeader'> Variable NaCl using 23.4%</div>
+            <div className='equation-body'>
+            <form className='equation-left'>
+              <input type='number' placeholder='NaCl Concentation' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
+              <div>
+                (
+                  <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
+                )
+              </div>
+            </form>
+            <div className='equation-right'>{this.state.volumeOfNACL234}</div>
+          </div>
         </div>
-        <div>
-        <div className='MathHeader'> Variable KCl using 2 mEq/mL</div>
-          <form>
-            <input type='number' placeholder='mEq Per Liter' value={this.state.mEqperLiter} onChange={this.handlemEqChange} />
-            (
-            <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
-            )
-            <span> = {this.state.mLPotassiumChl}</span>
+        <div className='equation'>
+          <div className='MathHeader'> Variable KCl using 2 mEq/mL</div>
+          <div className='equation-body'>
+            <form className='equation-left'>
+              <input type='number' placeholder='mEq Per Liter' value={this.state.mEqperLiter} onChange={this.handlemEqChange} />
+              <div>
+                (
+                  <input type='number' placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
+                )
+              </div>
           </form>
+          <div className='equation-right'> {this.state.mLPotassiumChl}</div>
+
+          </div>
         </div>
-        <div>
-        <div className='MathHeader'> Volume of Sterile Water</div>
-          <span><span className='Calcs'>{this.state.volume ? this.state.volume : 'TV'} - {this.state.volumeOfD70} - {this.state.volumeOfNACL234} - {this.state.mLPotassiumChl}</span> = {this.state.sterileWaterVolume}</span>
+        <div className='equation'>
+          <div className='MathHeader'> Volume of Sterile Water</div>
+          <div className='equation-body'>
+            <div className='equation-left'>{this.state.volume ? this.state.volume : 'TV'} - {this.state.volumeOfD70} - {this.state.volumeOfNACL234} - {this.state.mLPotassiumChl}</div>
+            <div className='equation-right'>{this.state.sterileWaterVolume}</div>
+          </div>
         </div>
       </div>
     )
