@@ -52,7 +52,7 @@ class Simple extends Component {
           <div className='MathHeader'> Variable Dextrose using D70%</div>
           <div className='equation-body'>
             <form className='equation-left'>
-              <input type='number' pattern={decimalRegex} placeholder='Dextrose Concentation' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
+              <input type='number' pattern={decimalRegex} placeholder='Dextrose Concentration' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
               <div>
                 (
                 <input type='number' pattern={intRegex} placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
@@ -66,7 +66,7 @@ class Simple extends Component {
           <div className='MathHeader'> Variable NaCl using 23.4%</div>
             <div className='equation-body'>
             <form className='equation-left'>
-              <input type='number' pattern={decimalRegex} placeholder='NaCl Concentation' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
+              <input type='number' pattern={decimalRegex} placeholder='NaCl Concentration' value={this.state.naclConcentation} onChange={this.handleNACLConcentrationChange} />
               <div>
                 (
                 <input type='number' pattern={intRegex}   placeholder='Total Volume' value={this.state.volume} onChange={this.handleVolumeChange} />
