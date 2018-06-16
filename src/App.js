@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Lab Math</h1>
+          <h1 className="App-title">Pediatric IV Fluid using D70%</h1>
         </header>
         <div className="App-intro">
           <Simple />
