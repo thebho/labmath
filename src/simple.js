@@ -56,7 +56,6 @@ class Simple extends Component {
   }
 
   sterileWaterCalculation = () => {
-    console.log(this.state)
     var d70Total = ((this.state.volume * this.state.dextroseConcentration)/this.state.dextrose).toFixed(2)
     var volumeOfNACL234 = ((this.state.volume * this.state.naclConcentation)/23.4).toFixed(2)
     var mLPotassiumChl = (this.state.mEqperLiter * this.state.volume) / 2000
