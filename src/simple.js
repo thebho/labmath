@@ -94,9 +94,12 @@ class Simple extends Component {
           <div className='equation-body'>
             <form className='equation-left'>
               <div>
-                <label>Available Concentration %:</label>
-                <input
-                  type='number' pattern={decimalRegex} placeholder='Available Concentration %' value={this.state.dextroseAvailableConcentration} onChange={this.handleDextroseAvailableConcentrationChange} />
+                <label>Available Concentration:</label>
+                <select value={this.state.dextroseAvailableConcentration} onChange={this.handleDextroseAvailableConcentrationChange}>
+                  <option value={20}>D20</option>
+                  <option value={50}>D50</option>
+                  <option value={70}>D70</option>
+                </select>
               </div>
               <div>
                 <label>Desired Concentration %:</label>
