@@ -12,7 +12,7 @@ class Simple extends Component {
     dextroseConcentration: '',
     volume: '',
     d70Total: 0,
-    dextrose: 70,
+    dextroseAvailableConcentration: 70,
     naclConcentation: '',
     volumeOfNACL234: 0,
     mEqperLiter: '',
@@ -28,6 +28,14 @@ class Simple extends Component {
       () => this.sterileWaterCalculation()
     )
   }
+
+  handleDextroseAvailableConcentrationChange = (event) => {
+    var dextroseAvailableConcentration = event.target.value
+    this.setState({dextroseAvailableConcentration: dextroseAvailableConcentration},
+      () => this.sterileWaterCalculation()
+    )
+  }
+
   handleNACLConcentrationChange = (event) => {
     var naclConcentation = event.target.value
     this.setState({naclConcentation: naclConcentation},
@@ -56,7 +64,7 @@ class Simple extends Component {
   }
 
   sterileWaterCalculation = () => {
-    var d70Total = ((this.state.volume * this.state.dextroseConcentration)/this.state.dextrose).toFixed(2)
+    var d70Total = ((this.state.volume * this.state.dextroseConcentration)/this.state.dextroseAvailableConcentration).toFixed(2)
     var volumeOfNACL234 = ((this.state.volume * this.state.naclConcentation)/23.4).toFixed(2)
     var mLPotassiumChl = (this.state.mEqperLiter * this.state.volume) / 2000
     var heparinTotal = (this.state.heparinnUnitsPerLiter * this.state.volume) / 100000
@@ -82,11 +90,19 @@ class Simple extends Component {
           </div>
         </div>
         <div className='equation'>
-          <div className='MathHeader'>Dextrose (using 70%)</div>
+          <div className='MathHeader'>Dextrose</div>
           <div className='equation-body'>
             <form className='equation-left'>
-              <input
-                type='number' pattern={decimalRegex} placeholder='Concentration %' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
+              <div>
+                <label>Available Concentration %:</label>
+                <input
+                  type='number' pattern={decimalRegex} placeholder='Available Concentration %' value={this.state.dextroseAvailableConcentration} onChange={this.handleDextroseAvailableConcentrationChange} />
+              </div>
+              <div>
+                <label>Desired Concentration %:</label>
+                <input
+                  type='number' pattern={decimalRegex} placeholder='Desired Concentration %' value={this.state.dextroseConcentration} onChange={this.handleDextroseConcentrationChange} />
+              </div>
               <div>
               (<VolInput volume={this.state.volume} />)
 
