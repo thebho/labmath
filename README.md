@@ -2,11 +2,11 @@
 
 A pediatric IV fluid calculator for computing dextrose concentrations and fluid volumes.
 
-## Overview
+## Prescription Overview
 
 Lab Math is a web-based calculator designed to help healthcare professionals quickly and accurately calculate pediatric IV fluid parameters using D70% (70% dextrose) solutions. The application provides an intuitive interface for computing fluid volumes and dextrose concentrations, along with calculations for sodium chloride, potassium chloride, heparin, and sterile water volumes.
 
-### Key Features
+### Therapeutic Capabilities
 
 - **Dextrose Calculation**: Computes D70% dextrose volumes based on desired concentration
 - **Sodium Chloride (NaCl)**: Calculates 23.4% NaCl volumes
@@ -15,25 +15,25 @@ Lab Math is a web-based calculator designed to help healthcare professionals qui
 - **Sterile Water**: Automatically computes remaining sterile water volume needed
 - **Real-time Calculations**: Results update instantly as parameters are entered
 
-## Live Application
+## Dispensary Access
 
 The application is deployed and available at: http://labmath.s3-website.us-east-2.amazonaws.com/
 
-## Tech Stack
+## Pharmaceutical Stack
 
 - **Frontend Framework**: React 16.4
 - **Build Tool**: Create React App (react-scripts)
 - **Hosting**: AWS S3 static website
 - **Package Manager**: Yarn or npm
 
-## Getting Started
+## Compounding Instructions
 
 ### Prerequisites
 
 - Node.js (v8 or higher recommended)
 - npm or Yarn
 
-### Installation
+### Preparation
 
 1. Clone the repository:
    ```bash
@@ -48,7 +48,7 @@ The application is deployed and available at: http://labmath.s3-website.us-east-
    yarn install
    ```
 
-### Development
+### Formulation
 
 To start the development server:
 
@@ -60,7 +60,7 @@ yarn start
 
 The application will open in your browser at `http://localhost:3000` and automatically reload when you make changes.
 
-### Building for Production
+### Production Dispensing
 
 To create an optimized production build:
 
@@ -72,7 +72,7 @@ yarn build
 
 The build output will be in the `build/` directory, ready for deployment.
 
-### Testing
+### Quality Assurance
 
 To run the test suite:
 
@@ -82,7 +82,7 @@ npm test
 yarn test
 ```
 
-## Usage
+## Dosage Administration
 
 1. Open the application in your web browser
 2. Enter the required parameters:
@@ -99,7 +99,7 @@ yarn test
    - Remaining sterile water volume
 4. Results are displayed immediately for clinical reference
 
-## Project Structure
+## Compounding Workspace
 
 ```
 labmath/
@@ -115,7 +115,7 @@ labmath/
 └── README.md          # This file
 ```
 
-## Known Issues
+## Contraindications & Warnings
 
 - **React Scripts Version**: The project uses react-scripts 1.1.4, which is outdated. Consider upgrading to a more recent version for security updates and improved build performance.
 - **Input Validation**: The calculator does not validate clinical parameters (e.g., maximum safe concentrations or volumes). Users should verify calculations against clinical guidelines.
@@ -123,10 +123,10 @@ labmath/
 - **Browser Compatibility**: Testing has been limited. Verify compatibility with all target browsers and devices.
 - **Accessibility**: The application may not fully comply with WCAG accessibility standards. Consider adding ARIA labels and keyboard navigation improvements.
 
-## Contributing
+## Collaboration & Refills
 
 Contributions are welcome. Please feel free to submit a pull request or open an issue for bugs and feature requests.
 
-## License
+## Licensing & Regulations
 
 See the LICENSE file for details.
